@@ -1,0 +1,6 @@
+INFO  | 2023-02-04 12:48:02 | [main] pages.LoginPage (LoginPage.java:54) - password entered
+INFO  | 2023-02-04 12:48:02 | [main] pages.LoginPage (LoginPage.java:56) - loginBtn Present
+INFO  | 2023-02-04 12:48:02 | [main] pages.LoginPage (LoginPage.java:57) - Clicked on loginBtn 
+INFO  | 2023-02-04 12:50:13 | [main] base.BaseClass (BaseClass.java:51) - Browser Lunch Successfully
+INFO  | 2023-02-04 12:50:13 | [main] test.TestClass (TestClass.java:31) - Step : 1 browser lunched 
+INFO  | 2023-02-04 12:50:13 | [main] pages.LoginPage (LoginPage.java:40) - Url is matched

@@ -1,0 +1,16 @@
+INFO  | 2023-02-04 16:13:30 | [main] pages.DashBordPage (DashBordPage.java:67) - Scroll On element :- [[ChromeDriver: chrome on WINDOWS (d4effb38cc4081b57eee88b6f49c078e)] -> xpath: //h4[contains(text(),'Candidate Pipeline By Recruiter Assigned')]]
+INFO  | 2023-02-04 16:13:48 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:66) - Test Case Failed org.testng.internal.TestResult
+INFO  | 2023-02-04 16:13:52 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:116) - ------------------------------------
+---------VINAYAK-FRAMEWORK----------
+------------------------------------
+------------------------------------
+--------Execution_Completed---------
+------------------------------------
+------------------------------------
+-------------C--R--M----------------
+------------------------------------
+----------------*-------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------

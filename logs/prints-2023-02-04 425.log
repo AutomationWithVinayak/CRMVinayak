@@ -1,0 +1,5 @@
+INFO  | 2023-02-04 16:10:15 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:44) - Test Case Passed org.testng.internal.TestResult
+INFO  | 2023-02-04 16:10:27 | [main] base.BaseClass (BaseClass.java:51) - Browser Lunch Successfully
+INFO  | 2023-02-04 16:10:27 | [main] test.TestClass (TestClass.java:32) - Step : 1 browser lunched 
+INFO  | 2023-02-04 16:10:27 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:38) - Execution Start
+INFO  | 2023-02-04 16:10:27 | [main] pages.LoginPage (LoginPage.java:41) - Url is matched

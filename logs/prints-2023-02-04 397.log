@@ -1,0 +1,5 @@
+INFO  | 2023-02-04 13:08:48 | [main] pages.LoginPage (LoginPage.java:52) - email entered
+INFO  | 2023-02-04 13:08:48 | [main] pages.LoginPage (LoginPage.java:54) - pwd  input tab Present
+INFO  | 2023-02-04 13:08:49 | [main] pages.LoginPage (LoginPage.java:55) - password entered
+INFO  | 2023-02-04 13:08:49 | [main] pages.LoginPage (LoginPage.java:57) - loginBtn Present
+INFO  | 2023-02-04 13:08:49 | [main] pages.LoginPage (LoginPage.java:58) - Clicked on loginBtn 

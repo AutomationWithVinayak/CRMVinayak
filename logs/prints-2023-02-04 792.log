@@ -1,0 +1,2 @@
+INFO  | 2023-02-04 16:23:56 | [main] pages.DashBordPage (DashBordPage.java:67) - Scroll On element :- [[ChromeDriver: chrome on WINDOWS (4bd4b6e738c1738a9b70c268a0f2becf)] -> xpath: //h4[contains(text(),'Candidate Pipeline By Recruiter Assigned')]]
+INFO  | 2023-02-04 16:23:59 | [main] pages.DashBordPage (DashBordPage.java:69) - Click On element :- [[ChromeDriver: chrome on WINDOWS (4bd4b6e738c1738a9b70c268a0f2becf)] -> xpath: (//div[@id="dashBoardRecruiterWidget"]//div[@class="dropdown dropdown-menu-animation select-field select-dropdown is-icon-right is-mobile-modal"])[1]]

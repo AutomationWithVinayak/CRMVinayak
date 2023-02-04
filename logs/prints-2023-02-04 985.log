@@ -1,0 +1,6 @@
+INFO  | 2023-02-04 16:33:38 | [main] pages.LoginPage (LoginPage.java:52) - email entered
+INFO  | 2023-02-04 16:33:38 | [main] pages.LoginPage (LoginPage.java:54) - pwd  input tab Present
+INFO  | 2023-02-04 16:33:39 | [main] pages.LoginPage (LoginPage.java:55) - password entered
+INFO  | 2023-02-04 16:33:39 | [main] pages.LoginPage (LoginPage.java:57) - loginBtn Present
+INFO  | 2023-02-04 16:33:39 | [main] pages.LoginPage (LoginPage.java:58) - Clicked on loginBtn 
+INFO  | 2023-02-04 16:33:45 | [main] base.Generic (Generic.java:139) - Successfully Scroll On  :- [[ChromeDriver: chrome on WINDOWS (daff20506b749b358fb8d156d6ba0971)] -> xpath: (//label[@id="sTest-taskListCheckBox"]//input)[1]]

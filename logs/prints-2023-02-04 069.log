@@ -1,0 +1,6 @@
+INFO  | 2023-02-04 16:32:26 | [main] pages.LoginPage (LoginPage.java:52) - email entered
+INFO  | 2023-02-04 16:32:26 | [main] pages.LoginPage (LoginPage.java:54) - pwd  input tab Present
+INFO  | 2023-02-04 16:32:27 | [main] pages.LoginPage (LoginPage.java:55) - password entered
+INFO  | 2023-02-04 16:32:27 | [main] pages.LoginPage (LoginPage.java:57) - loginBtn Present
+INFO  | 2023-02-04 16:32:27 | [main] pages.LoginPage (LoginPage.java:58) - Clicked on loginBtn 
+INFO  | 2023-02-04 16:32:31 | [main] base.Generic (Generic.java:139) - Successfully Scroll On  :- [[ChromeDriver: chrome on WINDOWS (b9f6c169d8cd0ea0c0282f16c953f515)] -> xpath: //a[@id="97-label"]//span]

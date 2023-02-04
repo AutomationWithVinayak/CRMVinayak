@@ -1,0 +1,6 @@
+INFO  | 2023-02-04 13:12:05 | [main] pages.LoginPage (LoginPage.java:52) - email entered
+INFO  | 2023-02-04 13:12:05 | [main] pages.LoginPage (LoginPage.java:54) - pwd  input tab Present
+INFO  | 2023-02-04 13:12:05 | [main] pages.LoginPage (LoginPage.java:55) - password entered
+INFO  | 2023-02-04 13:12:05 | [main] pages.LoginPage (LoginPage.java:57) - loginBtn Present
+INFO  | 2023-02-04 13:12:06 | [main] pages.LoginPage (LoginPage.java:58) - Clicked on loginBtn 
+INFO  | 2023-02-04 13:12:21 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:66) - Test Case Failed org.testng.internal.TestResult

@@ -1,0 +1,5 @@
+INFO  | 2023-02-04 16:32:26 | [main] base.BaseClass (BaseClass.java:51) - Browser Lunch Successfully
+INFO  | 2023-02-04 16:32:26 | [main] test.TestClass (TestClass.java:32) - Step : 1 browser lunched 
+INFO  | 2023-02-04 16:32:26 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:38) - Execution Start
+INFO  | 2023-02-04 16:32:26 | [main] pages.LoginPage (LoginPage.java:41) - Url is matched
+INFO  | 2023-02-04 16:32:26 | [main] pages.LoginPage (LoginPage.java:51) - email input tab  Present

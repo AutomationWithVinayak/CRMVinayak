@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Properties>
+        <Property name="basePath">../CRMVinayak/logs</Property>
+    </Properties>
+    <Appenders >
+        <!-- File Appender -->
+         <RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd SSS}.log">
+            <PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+         <SizeBasedTriggeringPolicy size="500" />
+          </RollingFile>
+        <!-- Console Appender -->
+        <Console name="STDOUT">
+            <PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="basePath" level="trace" />
+        <Root level="trace">
+            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>

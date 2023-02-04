@@ -1,0 +1,16 @@
+INFO  | 2023-02-04 16:24:01 | [main] pages.DashBordPage (DashBordPage.java:71) - Element Selected:- Selected from :- By.xpath: (//table[@id="dashboard_recruiter_table"]//following::div[@class="dropdown-content"])[2]//a
+INFO  | 2023-02-04 16:24:08 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:44) - Test Case Passed org.testng.internal.TestResult
+INFO  | 2023-02-04 16:24:12 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:116) - ------------------------------------
+---------VINAYAK-FRAMEWORK----------
+------------------------------------
+------------------------------------
+--------Execution_Completed---------
+------------------------------------
+------------------------------------
+-------------C--R--M----------------
+------------------------------------
+----------------*-------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
