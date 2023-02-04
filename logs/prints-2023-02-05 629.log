@@ -1,0 +1,6 @@
+INFO  | 2023-02-05 00:25:55 | [main] pages.LoginPage (LoginPage.java:52) - email entered
+INFO  | 2023-02-05 00:25:55 | [main] pages.LoginPage (LoginPage.java:54) - pwd  input tab Present
+INFO  | 2023-02-05 00:25:55 | [main] pages.LoginPage (LoginPage.java:55) - password entered
+INFO  | 2023-02-05 00:25:55 | [main] pages.LoginPage (LoginPage.java:57) - loginBtn Present
+INFO  | 2023-02-05 00:25:56 | [main] pages.LoginPage (LoginPage.java:58) - Clicked on loginBtn 
+INFO  | 2023-02-05 00:26:05 | [main] base.Generic (Generic.java:139) - Successfully Scroll On  :- [[ChromeDriver: chrome on WINDOWS (22ef61550c742054aefc6ef60ecb4c7d)] -> xpath: //h4[contains(text(),'Candidate Pipeline By Recruiter Assigned')]]
