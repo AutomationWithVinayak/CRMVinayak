@@ -41,7 +41,7 @@ public class BaseClass {
 		ChromeOptions option = new ChromeOptions();
 		
 		option.addArguments("--disabled-notifications");
-		
+		System.setProperty("webdriver.chrome.driver", "D:\\eclipseworkplace\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(pro.getProperty("Url"));
 		driver.manage().window().maximize();

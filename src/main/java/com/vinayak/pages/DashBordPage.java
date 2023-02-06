@@ -33,6 +33,7 @@ public class DashBordPage  extends Generic{
 	@FindBy(xpath="(//div[@id=\"dashBoardRecruiterWidget\"]//div[@class=\"dropdown dropdown-menu-animation select-field select-dropdown is-icon-right is-mobile-modal\"])[1]")  WebElement apdBtn;
    // @FindBy(xpath="//a[@id=\"97-label\"]//span") WebElement checkBox;
     @FindBy(xpath="//label[@id=\"sTest-taskListCheckBox\"]") WebElement checkBox1;
+    @FindBy(xpath="//button[@aria-label=\"Thursday, February 16 - Times available\"]") WebElement date;
 	
 	
 //	public void  candidateResumeParserUpload() {
@@ -84,6 +85,21 @@ public class DashBordPage  extends Generic{
 		
 	}
 	
+	
+	public void iWantDemo() throws IOException {
+		gn = new Generic();
+		
+		gn.getDynamicClick("I Want a Demo");
+		gn.waitInSec(3);
+		String id = gn.getWindowHandalId(1);
+		System.out.println(id);
+		gn.windowHandal(id);
+		gn.waitInSec(3);
+		gn.elemenetIsDisplay(date);
+		date.click();
+		
+		
+	}
 	
 
 }

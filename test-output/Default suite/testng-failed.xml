@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.vinayak.test.TestClass">
+      <class name="com.vinayak.test.TestClass1">
         <methods>
-          <include name="setupStart"/>
-          <include name="clickOnCheckBox"/>
-          <include name="tearDown"/>
+          <include name="m2"/>
+          <include name="m1"/>
         </methods>
-      </class> <!-- com.vinayak.test.TestClass -->
+      </class> <!-- com.vinayak.test.TestClass1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

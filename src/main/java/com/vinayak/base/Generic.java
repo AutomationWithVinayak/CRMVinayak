@@ -85,8 +85,10 @@ public class Generic extends BaseClass{
 
 
 	public void clickOnElement(WebElement resumeBtn) {
+		
+		String path = resumeBtn.toString();
 
-		((WebElement) driver.findElements((By) resumeBtn)).click();
+		driver.findElement(By.xpath(path));
 	
 	}
 
@@ -253,7 +255,7 @@ public class Generic extends BaseClass{
 	 */ 
    
    
-   public static String getWindowHandalId(int i) {
+   public  String getWindowHandalId(int i) {
 	   
 	   Set<String> ids=driver.getWindowHandles();
 	   ArrayList<String> a = new ArrayList<String>(ids);

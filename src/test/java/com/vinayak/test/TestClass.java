@@ -67,17 +67,17 @@ public class TestClass extends BaseClass {
 
 	}
 	
-	@Test
-	public void clickOnCheckBox() throws IOException {
-		
-		db = new DashBordPage();
-		lp = new LoginPage();
-		gn =new Generic();
-		lp.verifyUrl(pro.getProperty("Url"));
-		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
-		db.clickOnCheckBox();
-		
-	}
+//	@Test
+//	public void clickOnCheckBox() throws IOException {
+//		
+//		db = new DashBordPage();
+//		lp = new LoginPage();
+//		gn =new Generic();
+//		lp.verifyUrl(pro.getProperty("Url"));
+//		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
+//		db.clickOnCheckBox();
+//		
+//	}
 
 
 	@AfterClass

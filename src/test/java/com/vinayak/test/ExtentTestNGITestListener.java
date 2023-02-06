@@ -5,7 +5,6 @@ import java.util.Arrays;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -59,6 +58,7 @@ public class ExtentTestNGITestListener extends BaseClass implements ITestListene
             File targetFile = new File("./screenshots/" + methodName + ".png");
             Files.copy(srcFile, targetFile);
             test.get().addScreenCaptureFromPath(targetFile.getAbsolutePath());
+            
         } catch (Exception e) {
             test.get().error("Error while taking screenshot " + e.getMessage());
         }
