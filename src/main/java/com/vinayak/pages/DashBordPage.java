@@ -12,7 +12,7 @@ import com.vinayak.base.Generic;
 
 public class DashBordPage  extends Generic{
 	
-	String path =" C:\\Users\\hp elitebook\\Desktop\\pople.xlsx";
+	
 	Generic gn = new Generic();
 	
 	
@@ -36,13 +36,13 @@ public class DashBordPage  extends Generic{
     @FindBy(xpath="//button[@aria-label=\"Thursday, February 16 - Times available\"]") WebElement date;
 	
 	
-//	public void  candidateResumeParserUpload() {
-//		
-//		candidateBtn.click(); log.info("click on CandidateBtn ");	
-//		gn.clickOnElement(resumeBtn); //resumeBtn.click();
-//		resumeParserUpload.sendKeys(path); log.info("FileUploadSuccesfully");
-//		
-//	}
+	public void  candidateResumeParserUpload() {
+		
+		candidateBtn.click(); log.info("click on CandidateBtn ");	
+		gn.clickOnElement(resumeBtn); //resumeBtn.click();
+		resumeParserUpload.sendKeys(pro.getProperty("FilePath")); log.info("FileUploadSuccesfully");
+		
+	}
 	
 	
 	
@@ -81,7 +81,7 @@ public class DashBordPage  extends Generic{
 		gn.waitInSec(2);
 		gn.scrollOnElement(checkBox1);  
 		gn.waitInSec(3);
-		checkBox1.click();
+		//checkBox1.click();
 		
 	}
 	
