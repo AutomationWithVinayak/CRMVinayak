@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Generic extends BaseClass{
 
+	
 
 	public Generic() throws IOException {
 		super();
@@ -55,21 +56,14 @@ public class Generic extends BaseClass{
 
 	/****
 	 * 
-	 * *******@Authour :- Vinayak , Purpose make common method for VerifyElementIs Present or Not (only for element with text <tagname..>text</tagname ..>  ****************
+	 * *******@Authour :- Vinayak , Purpose make common method for VerifyElementIs Present or Not (only for element with text <tagname..>text</tagname ..>  
+	 * @return ****************
 	 ****/	
 
 
-	public void textIsDisplay(String text) {
+	public boolean textIsDisplay(String text) {
 
-		boolean t = driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed();
-		if(t== true) {
-
-			log.info(text+" Text Is Present");
-		}
-		else {
-			log.info(text+" Text Is Not Present");
-
-		}
+		 return  driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed();
 		
 
 	}

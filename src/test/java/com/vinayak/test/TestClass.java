@@ -34,24 +34,16 @@ public class TestClass extends BaseClass {
 	}
 
 
-//	@Test
-//	public void loginEnter() throws IOException {
-//		lp = new LoginPage();
-//		lp.verifyUrl(pro.getProperty("Url"));
-//		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
-//		lp.fistPageTitleVerify(pro.getProperty("title"));
-//
-//	}
+	@Test
+	public void loginEnter() throws IOException {
+		lp = new LoginPage();
+		lp.verifyUrl(pro.getProperty("Url"));
+		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
+		lp.fistPageTitleVerify(pro.getProperty("title"));
 
-	//	@Test
-	//	public void trym() throws IOException {
-	//		
-	//		lp = new LoginPage();
-	//		lp.verifyUrl(pro.getProperty("Url"));	
-	//		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
-	//		lp.trym1();
-	//		
-	//	}
+	}
+
+		
 
 
 	@Test
@@ -67,17 +59,17 @@ public class TestClass extends BaseClass {
 
 	}
 	
-//	@Test
-//	public void clickOnCheckBox() throws IOException {
-//		
-//		db = new DashBordPage();
-//		lp = new LoginPage();
-//		gn =new Generic();
-//		lp.verifyUrl(pro.getProperty("Url"));
-//		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
-//		db.clickOnCheckBox();
-//		
-//	}
+	@Test
+	public void clickOnCheckBox() throws IOException {
+		
+		db = new DashBordPage();
+		lp = new LoginPage();
+		gn =new Generic();
+		lp.verifyUrl(pro.getProperty("Url"));
+		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
+		db.clickOnCheckBox();
+		
+	}
 
 
 	@AfterClass

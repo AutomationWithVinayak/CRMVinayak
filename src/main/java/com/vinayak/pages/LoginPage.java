@@ -28,7 +28,6 @@ public class LoginPage extends Generic {
 	@FindBy(id="sTestEmail") private WebElement email;
 	@FindBy(id="sTestPassword") private WebElement pwd;
 	@FindBy(xpath="//button[@id=\"sTestLoginBtn\"]") private WebElement loginBtn;
-	@FindBy(xpath="//button[@id=\"sTestLoginBt\"]") private WebElement loginBtntry;
 	
 	
 	
@@ -76,10 +75,6 @@ public class LoginPage extends Generic {
 	
 	
 	
-	public void trym1() {
-		
-		loginBtntry.click();
-		
-	}
+	
 	
 }

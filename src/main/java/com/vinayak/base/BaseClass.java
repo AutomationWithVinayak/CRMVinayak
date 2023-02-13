@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.vinayak.util.Util;
 
@@ -41,14 +42,15 @@ public class BaseClass {
 		ChromeOptions option = new ChromeOptions();
 		
 		option.addArguments("--disabled-notifications");
-		System.setProperty("webdriver.chrome.driver", "D:\\eclipseworkplace\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "D:\\eclipseworkplace\\chromedriver_win32\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		driver.get(pro.getProperty("Url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Util.IMPLICITLY_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(Util.PAGE_LOAD, TimeUnit.SECONDS);
-		log.info("Browser Lunch Successfully");
+		//log.info("Browser Lunch Successfully");
 		
 	}
 	

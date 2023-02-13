@@ -1,5 +1,5 @@
-INFO  | 2023-02-06 10:04:07 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:43) - Test Case Passed org.testng.internal.TestResult
-INFO  | 2023-02-06 10:04:07 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:116) - ------------------------------------
+INFO  | 2023-02-10 00:25:32 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:43) - Test Case Passed m1
+INFO  | 2023-02-10 00:25:32 | [main] test.ExtentTestNGITestListener (ExtentTestNGITestListener.java:116) - ------------------------------------
 ---------VINAYAK-FRAMEWORK----------
 ------------------------------------
 ------------------------------------

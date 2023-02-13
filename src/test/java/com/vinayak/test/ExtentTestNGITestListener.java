@@ -34,13 +34,13 @@ public class ExtentTestNGITestListener extends BaseClass implements ITestListene
 		
 		ExtentTest child = test.get().createNode(result.getMethod().getMethodName());
         test.set(child);
-		log.info("Execution Start");
+		log.info("Execution Start" + result.getMethod().getMethodName());
 		
 	}
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		test.get().pass("Test passed");
-		log.info("Test Case Passed "+result.getClass().getName());
+		log.info("Test Case Passed "+result.getMethod().getMethodName());
 	}
 	
 	
