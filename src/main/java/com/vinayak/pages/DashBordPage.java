@@ -24,6 +24,11 @@ public class DashBordPage  extends Generic{
 	
 
 	
+	@FindBy(xpath="//a[@id=\"sTest-dpLinkInAppBtn\"]") WebElement profileIcon;
+	@FindBy(xpath="//a[contains(text(),'Upgrade Your Account' )]") WebElement UpgradeAcLable;
+	@FindBy(id="sTest-addInAppBtn") WebElement addLable;
+	@FindBy(xpath="//i[contains(text(),'notifications_active' )]") WebElement notificationLable;
+	
 	
 	@FindBy(xpath="//i[@id=\"sTest-candidateIcon\"]") WebElement  candidateBtn;
 	@FindBy(id="sTest-resumeParserBtn") WebElement resumeBtn;
@@ -68,7 +73,7 @@ public class DashBordPage  extends Generic{
 		gn.waitInSec(2);
 		gn.scrollOnElement(candidatePipeline);                           log.info("Scroll On element :- "+ candidatePipeline);
 		gn.waitInSec(3);
-		apdBtn.click();                                              log.info("Click On element :- "+ apdBtn);
+		apdBtn.click();                                                  log.info("Click On element :- "+ apdBtn);
 		gn.waitInSec(2);
 		gn.dropDowm(appliedDropDown, "Offered");                         log.info("Element Selected:- "+ "Selected from :- "+ appliedDropDown);
 		

@@ -14,6 +14,7 @@ public class ExtentManager {
 	private static ExtentReports extent;
 
     public static ExtentReports createInstance() {
+    	
         String fileName = "ExtentReport.html";
         String filePath = System.getProperty("user.dir") + "/extentreports/" + fileName;
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(filePath);
@@ -28,6 +29,7 @@ public class ExtentManager {
         extent.attachReporter(htmlReporter);
 
         return extent;
+        
     }
 	
 	

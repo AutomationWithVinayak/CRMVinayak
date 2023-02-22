@@ -36,6 +36,7 @@ public class TestClass extends BaseClass {
 
 	@Test
 	public void loginEnter() throws IOException {
+
 		lp = new LoginPage();
 		lp.verifyUrl(pro.getProperty("Url"));
 		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));

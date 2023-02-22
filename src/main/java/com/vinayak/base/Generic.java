@@ -1,15 +1,19 @@
 package com.vinayak.base;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Generic extends BaseClass{
 
@@ -48,7 +52,6 @@ public class Generic extends BaseClass{
 
 	public void getDynamicClick(String text) {
 
-
 		driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).click();
 
 	}
@@ -65,7 +68,6 @@ public class Generic extends BaseClass{
 
 		 return  driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed();
 		
-
 	}
 
 
@@ -134,9 +136,6 @@ public class Generic extends BaseClass{
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
 		log.info("Successfully Scroll On  :- "+ element);
 
-
-
-
 	}
 
 
@@ -153,6 +152,7 @@ public class Generic extends BaseClass{
 		Actions ac = new Actions(driver);
 		ac.moveToElement(target).build().perform();	  
 		return;
+		
 	}
 
 
@@ -257,6 +257,25 @@ public class Generic extends BaseClass{
 	   return windowId ;
 	   
    }
+   
+   
+   
+   
+   /**
+  	 * 
+  	 **@Authour :- Vinayak ,This Method Is use to apply Explicity Wait for 15 sec to perticure element that need  or take time to visible
+  	 */ 
+   
+   
+   public static  WebElement waitUntilElementVisible( WebElement element) {
+		
+		Duration timeout = Duration.ofSeconds(15);
+       WebDriverWait wait = new WebDriverWait(driver, timeout);
+      return wait.until(ExpectedConditions.visibilityOf(element));
+       
+   }
+   
+   
     
 	
 
