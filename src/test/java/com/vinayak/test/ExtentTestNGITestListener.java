@@ -113,7 +113,7 @@ public class ExtentTestNGITestListener extends BaseClass implements ITestListene
 	
 	@Override
 	public void onFinish(ITestContext context) {
-		log.info(""
+		log.info("\n"
 				+ "------------------------------------"+'\n'
 				+ "---------VINAYAK-FRAMEWORK----------"+'\n'
 				+ "------------------------------------"+'\n'

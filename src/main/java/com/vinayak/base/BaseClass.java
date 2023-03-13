@@ -27,7 +27,7 @@ public class BaseClass {
 	
 	public BaseClass() throws IOException{
 		
-		FileInputStream file = new FileInputStream ("D:\\eclipseworkplace\\Appium_WorkPlace\\ExtentReport\\src\\main\\java\\com\\vinayak\\config\\Properties.text");
+		FileInputStream file = new FileInputStream ("D:\\eclipseworkplace\\Appium_WorkPlace\\CRMVinayak\\src\\main\\java\\com\\vinayak\\config\\Properties.text");
 		
 		 pro = new Properties();
 		 pro.load(file);

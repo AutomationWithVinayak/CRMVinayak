@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.vinayak.base.Generic;
 
 
+
 public class DashBordPage  extends Generic{
 	
 	
@@ -107,4 +108,21 @@ public class DashBordPage  extends Generic{
 	}
 	
 
+	public void elementVerification() {
+		
+		
+		boolean t1= gn.waitUntilElementVisible(profileIcon).isDisplayed();
+		
+		//Assert.assertEquals(t1, true , "profileIcon is not display");
+		boolean t2= gn.waitUntilElementVisible(UpgradeAcLable).isDisplayed();
+		boolean t3= gn.waitUntilElementVisible(addLable).isDisplayed();
+		boolean t4= gn.waitUntilElementVisible(notificationLable).isDisplayed();
+		
+		log.info(t1 +" "+t2+" "+t3+" "+t4);
+
+		
+		
+	}
+	
+	
 }

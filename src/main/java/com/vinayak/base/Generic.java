@@ -267,7 +267,7 @@ public class Generic extends BaseClass{
   	 */ 
    
    
-   public static  WebElement waitUntilElementVisible( WebElement element) {
+   public WebElement waitUntilElementVisible( WebElement element) {
 		
 		Duration timeout = Duration.ofSeconds(15);
        WebDriverWait wait = new WebDriverWait(driver, timeout);
