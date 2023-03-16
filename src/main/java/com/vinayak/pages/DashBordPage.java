@@ -100,8 +100,8 @@ public class DashBordPage  extends Generic{
 		String id = gn.getWindowHandalId(1);
 		gn.windowHandal(id);
 		gn.waitInSec(3);
-		gn.elemenetIsDisplay(date);
-		date.click();
+//		gn.elemenetIsDisplay(date);
+//		date.click();
 		
 		
 	}
