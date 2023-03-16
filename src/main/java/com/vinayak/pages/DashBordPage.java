@@ -98,7 +98,6 @@ public class DashBordPage  extends Generic{
 		gn.getDynamicClick("I Want a Demo");
 		gn.waitInSec(3);
 		String id = gn.getWindowHandalId(1);
-		System.out.println(id);
 		gn.windowHandal(id);
 		gn.waitInSec(3);
 		gn.elemenetIsDisplay(date);
