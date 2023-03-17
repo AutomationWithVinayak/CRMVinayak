@@ -10,27 +10,13 @@ tools{
 
 }
     stages{
-        stage("SCM Checkout"){
+        stage("Build"){
             steps{
-            git 'https://github.com/TestEngineer-I/CRMVinayak.git'
-            }
-        }
-        stage("Maven Build"){
-            steps{
-                bat 'mvn clean package'
-            }
-        }
+            git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
+            bat 'mvn clean test -Dsuite=src/test/java/com/vinayak/regression'
 
-        stage('Test') {
-            steps {
-                bat 'mvn test -pl src/test/java/com/vinayak/regression'
             }
-        }
-
-        stage('Report') {
-            steps {
-                junit 'path/to/your/package/target/surefire-reports/*.xml'
-            }
-        }
+        }       
+        
     }
 }
