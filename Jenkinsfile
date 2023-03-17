@@ -1,15 +1,13 @@
 pipeline {
   agent any
   
-  environment {
-    PATH = "/usr/bin:${env.PATH}"
-  }
+  
   
   stages {
     stage('Maven Version') {
       steps {
       
-      bat label: '',script:'mavn -v'
+      bat label: '',script:'mvn -v'
       
       }
     }
