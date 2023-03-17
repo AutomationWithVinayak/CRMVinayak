@@ -4,8 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'javac -d build src/*.java'
-      }
+         git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'      }
     }
     stage('Test') {
       steps {
