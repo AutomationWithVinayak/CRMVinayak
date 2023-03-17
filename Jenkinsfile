@@ -19,7 +19,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        bat 'mvn test -Dtest=com.vinayak.regression.Test1,Test2'
+        bat 'mvn test -Dtest=com.vinayak.test.TestClass1'
       }
     }
   }
