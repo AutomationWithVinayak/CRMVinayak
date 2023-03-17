@@ -17,14 +17,11 @@ tools{
       }
     }
     stage('Test') {
-      when {
-        // Add a condition to check if the specific test case needs to be run
-        expression { params.RUN_SPECIFIC_TEST == true }
-      }
+   
       steps {
-        // Run the specific test case here
+     
         bat 'mvn compile'
-        bat 'mvn test com.vinayak.regression.Test1'
+        bat 'mvn test -Dtest=com.vinayak.regression.Test1'
       }
     }
   }
