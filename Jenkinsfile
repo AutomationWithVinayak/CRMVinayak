@@ -24,7 +24,7 @@ tools{
       steps {
         // Run the specific test case here
         bat 'mvn compile'
-        bat 'mvn test -Dtest=com.vinayak.regression.Test1'
+        bat 'mvn test com.vinayak.regression.Test1'
       }
     }
   }
