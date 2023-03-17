@@ -1,23 +1,15 @@
 pipeline {
   agent any
-  tools {
-    maven 'mvn'
-  }
-  environment {
-    PATH = "C:\\WINDOWS\\SYSTEM32"
-    MY_VAR = "my_value"
-  }
+
   stages {
     stage('Build') {
       steps {
-        git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
-        bat 'mvn clean'
+        bat 'javac -d build src/*.java'
       }
     }
-    stage('Run tests') {
+    stage('Test') {
       steps {
-        // Run the entire test package here
-        bat 'mvn test -Dtest=com.vinayak.test.*'
+        bat 'java -cp build com.vinayak.test'
       }
     }
   }
