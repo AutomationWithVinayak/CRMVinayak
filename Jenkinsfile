@@ -1,6 +1,8 @@
 pipeline {
-  agent any{
-   
+  agent any
+  
+  environment {
+    PATH = "/usr/bin:${env.PATH}"
   }
   
   stages {
@@ -13,19 +15,11 @@ pipeline {
       }
     }
     
-    stage('Build') {
-      steps {
-        // Build the project with Maven
-        sh 'mvn clean package'
-      }
-    }
-    
     stage('Run Tests') {
       steps {
         // Run all tests in the specified package
-        sh 'mvn test -Dtest=com.vinayak.regression'
+        sh './run_tests.sh com.vinayak.regression'
       }
     }
   }
 }
-
