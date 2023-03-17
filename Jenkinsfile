@@ -16,7 +16,7 @@ tools{
 
       }
     }
-    stage('Run tests') {
+    stage('Test') {
       when {
         // Add a condition to check if the specific test case needs to be run
         expression { params.RUN_SPECIFIC_TEST == true }
