@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
-        bat 'mvn clean install'
+        bat 'mvn clean'
       }
     }
     stage('Run tests') {
