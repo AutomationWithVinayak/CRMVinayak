@@ -1,8 +1,9 @@
 pipeline {
-  agent any
-  
-  environment {
-    PATH = "/usr/bin:${env.PATH}"
+  agent {
+    docker {
+      image 'maven:3.6.3-jdk-11'
+      args '-v $HOME/.m2:/root/.m2'
+    }
   }
   
   stages {
@@ -15,11 +16,19 @@ pipeline {
       }
     }
     
+    stage('Build') {
+      steps {
+        // Build the project with Maven
+        sh 'mvn clean package'
+      }
+    }
+    
     stage('Run Tests') {
       steps {
         // Run all tests in the specified package
-        sh './run_tests.sh com.vinayak.regression'
+        sh 'mvn test -Dtest=com.vinayak.regression'
       }
     }
   }
 }
+
