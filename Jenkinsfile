@@ -1,6 +1,5 @@
 pipeline {
-    agent any
-    
+  agent any
 tools{
         maven 'mvn'
     }
@@ -9,14 +8,23 @@ tools{
     PATH = "C:\\WINDOWS\\SYSTEM32"
 
 }
-    stages{
-        stage("Build"){
-            steps{
-            git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
-            bat 'mvn clean test -Dsuite=src/test/java/com/vinayak/regression'
 
-            }
-        }       
-        
+  stages {
+    stage('Build') {
+      steps {
+              git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
+
+      }
     }
+    stage('Run tests') {
+      when {
+        // Add a condition to check if the specific test case needs to be run
+        expression { params.RUN_SPECIFIC_TEST == true }
+      }
+      steps {
+        // Run the specific test case here
+        bat 'mvn test -Dtest=regression'
+      }
+    }
+  }
 }
