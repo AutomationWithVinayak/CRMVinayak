@@ -21,7 +21,7 @@ tools{
       steps {
      
         bat 'mvn compile'
-        bat 'mvn test -Dtest=com.vinayak.regression.Test1'
+        bat 'mvn test -Dtest=com.vinayak.test'
       }
     }
   }
