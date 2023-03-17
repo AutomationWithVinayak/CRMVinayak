@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven 'mvn'
+    maven 'Maven 3.8.6'
   }
   environment {
     PATH = "C:\\WINDOWS\\SYSTEM32"
@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
+        bat 'mvn clean install'
       }
     }
     stage('Run tests') {
