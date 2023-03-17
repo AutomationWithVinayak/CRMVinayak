@@ -1,5 +1,12 @@
 pipeline {
   agent any
+  ools {
+    maven 'mvn'
+  }
+  environment {
+    PATH = "C:\\WINDOWS\\SYSTEM32"
+    MY_VAR = "my_value"
+  }
 
   stages {
     stage('Build') {
