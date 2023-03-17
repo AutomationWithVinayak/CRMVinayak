@@ -3,9 +3,10 @@ pipeline {
 
   stages {
     stage('Build') {
-      steps {
-         git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'      }
-    }
+  steps {
+    bat 'C:\\Program Files\\Java\\jdk1.8.0_281\\bin\\javac -d build src/*.java'
+  }
+}
     stage('Test') {
       steps {
         bat 'java -cp build com.vinayak.test'
