@@ -1,6 +1,7 @@
 pipeline {
     agent any
-     tools{
+    
+tools{
         maven 'mvn'
     }
     environment {
@@ -8,23 +9,21 @@ pipeline {
     PATH = "C:\\WINDOWS\\SYSTEM32"
 
 }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                bat 'git clone https://github.com/TestEngineer-I/CRMVinayak.git && cd CRMVinayak && git checkout master'
+    stages{
+        stage("SCM Checkout"){
+            steps{
+            git 'https://github.com/TestEngineer-I/CRMVinayak.git'
             }
         }
-
-        stage('Build') {
-            steps {
-                bat 'mvn clean install -DskipTests=true'
+        stage("Maven Build"){
+            steps{
+                bat 'mvn clean package'
             }
         }
 
         stage('Test') {
             steps {
-               bat 'mvn clean install -Dtest=src/test/java/com/vinayak/regression'
+                bat 'mvn test -pl src/test/java/com/vinayak/regression'
             }
         }
 
