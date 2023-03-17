@@ -23,7 +23,7 @@ tools{
       }
       steps {
         // Run the specific test case here
-        bat 'mvn test -Dtest=Test1'
+        bat 'mvn test -Dtest=src/test/java/com/vinayak/regression/Test1'
       }
     }
   }
