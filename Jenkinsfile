@@ -16,7 +16,7 @@ pipeline {
     stage('Run tests') {
       steps {
         // Run the entire test package here
-        bat "mvn test -Dtest=com.vinayak.regression.*"
+        bat "mvn test -Dtest=com.vinayak.regression.* -X"
       }
     }
   }
