@@ -20,8 +20,8 @@ tools{
    
       steps {
      
-        bat 'mvn compile'
-        bat 'mvn test -Dtest=com.vinayak.test'
+        bat 'mvn test -Dtest=com.vinayak.test.TestClass2'
+        
       }
     }
   }
