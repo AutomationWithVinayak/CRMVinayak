@@ -29,13 +29,13 @@ pipeline {
     }
   }
   
-  post {
+ post {
     always {
       // Define the directory where TestNG results will be saved
-      def testngResultsDir = "${env.WORKSPACE}/target/surefire-reports/testng-results.xml"
+      def testngResultsDir = "${env.WORKSPACE}\\target\\surefire-reports\\testng-results.xml"
 
       // Archive the TestNG results directory
-      archiveArtifacts "${testngResultsDir}"
+      archiveArtifacts artifacts: "${testngResultsDir}", allowEmptyArchive: true
 
       // Generate the TestNG report using the TestNG Results plugin
       step([$class: 'TestNGResultArchiver', testResults: "${testngResultsDir}"])
