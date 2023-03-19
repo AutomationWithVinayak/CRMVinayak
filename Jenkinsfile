@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('clean') {
       steps {
-        git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
+        git branch: 'master', url: 'https://github.com'
         bat 'mvn clean'
       }
     }
@@ -28,12 +28,6 @@ pipeline {
         bat 'mvn test -Dtest=com.vinayak.test.*'
       }
     
-    }
-    stage('Report') {
-    steps {
-        dir("${env.WORKSPACE}/target") {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '.', reportFiles: 'index.html', reportName: 'Test Results'])
-        }
     }
 }
   
