@@ -24,9 +24,9 @@ pipeline {
     }
     
     stage('Test') {
-      steps {
+      steps {	
       
-    bat 'mvn test -Dtest=com.vinayak.regression/*'
+    bat 'mvn test -Dtest=com.vinayak.regression\\*'
       }
     
     }
