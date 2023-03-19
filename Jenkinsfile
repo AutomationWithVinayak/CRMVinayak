@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('clean') {
       steps {
-        git branch: 'master', url: 'https://github.com'
+        git branch: 'master', url: 'https://github.com/TestEngineer-I/CRMVinayak.git'
         bat 'mvn clean'
       }
     }
