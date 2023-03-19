@@ -28,12 +28,13 @@ pipeline {
         bat 'mvn test -Dtest=com.vinayak.test.*'
       }
     
-      post {
-        always {
-          def testngResultsDir = "${env.WORKSPACE}/target/surefire-reports/testng-results.xml"
-          junit testResults: "${testngResultsDir}"
-        }
-      }
     }
-  }
+    stage('Report') {
+    steps {
+        dir("${env.WORKSPACE}/target") {
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '.', reportFiles: 'index.html', reportName: 'Test Results'])
+        }
+    }
+}
+  
 }
