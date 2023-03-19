@@ -27,9 +27,7 @@ pipeline {
       steps {
         bat 'mvn test -Dtest=com.vinayak.test.*'
       }
-    }
-  }
-  
+    
  post {
         always {
           def testngResultsDir = "${env.WORKSPACE}/target/surefire-reports/testng-results.xml"
