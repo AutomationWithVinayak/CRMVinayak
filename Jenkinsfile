@@ -28,7 +28,7 @@ pipeline {
         bat 'mvn test -Dtest=com.vinayak.test.*'
       }
     
- post {
+      post {
         always {
           def testngResultsDir = "${env.WORKSPACE}/target/surefire-reports/testng-results.xml"
           junit testResults: "${testngResultsDir}"
