@@ -30,6 +30,15 @@ pipeline {
       }
     
     }
+    
+    stage('Message') {
+      steps {	
+      
+            echo 'Succeeded! ready to release'
+      }
+    
+    }
+    
 }
 
   
