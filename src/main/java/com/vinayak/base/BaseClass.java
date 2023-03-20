@@ -10,6 +10,7 @@ import org.apache.commons.collections4.Get;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import  org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import  org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -40,14 +41,14 @@ public class BaseClass {
 	@SuppressWarnings("deprecation")
 	public static void setup() {
 		
-		ChromeOptions option = new ChromeOptions();
 		
-		option.addArguments("--disabled-notifications");
-
-		//driver = new ChromeDriver(option);
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		driver = new ChromeDriver();
+		//driver = new FirefoxDriver();
+		// driver.get("https://www.google.com/");
+		 
 		driver.get(pro.getProperty("Url"));
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Util.IMPLICITLY_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(Util.PAGE_LOAD, TimeUnit.SECONDS);
