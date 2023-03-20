@@ -84,9 +84,7 @@ public class DashBordPage  extends Generic{
 	
 	public void clickOnCheckBox() throws IOException {
 		gn = new Generic();
-		gn.waitInSec(2);
 		gn.scrollOnElement(checkBox1);  
-		gn.waitInSec(3);
 		//checkBox1.click();
 		
 	}
