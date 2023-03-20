@@ -5,7 +5,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -270,8 +269,8 @@ public class Generic extends BaseClass{
    
    public WebElement waitUntilElementVisible( WebElement element) {
 		
-		
-       WebDriverWait wait = new WebDriverWait(driver, 15);
+		Duration timeout = Duration.ofSeconds(15);
+       WebDriverWait wait = new WebDriverWait(driver, timeout);
       return wait.until(ExpectedConditions.visibilityOf(element));
        
    }

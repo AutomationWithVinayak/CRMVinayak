@@ -42,13 +42,13 @@ public class BaseClass {
 	public static void setup() {
 		
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-		driver = new ChromeDriver();
-		//driver = new FirefoxDriver();
-		// driver.get("https://www.google.com/");
-		 
+		//System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		ChromeOptions co= new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(co);
+
 		driver.get(pro.getProperty("Url"));
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Util.IMPLICITLY_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(Util.PAGE_LOAD, TimeUnit.SECONDS);
