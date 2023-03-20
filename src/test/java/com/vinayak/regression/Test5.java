@@ -9,6 +9,9 @@ public class Test5 {
 	public void m5() {
 		
 		System.out.println("five test jenkins");
+		int a=5;
+		System.out.println(a);
+		System.out.println();
 	}
 
 }
