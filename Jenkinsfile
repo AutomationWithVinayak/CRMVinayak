@@ -27,6 +27,7 @@ pipeline {
       steps {	
       
     bat 'mvn test -Dtest=com.vinayak.regression\\*'
+
       }
     
     }
