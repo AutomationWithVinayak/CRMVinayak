@@ -44,14 +44,13 @@ public class BaseClass {
 		
 		option.addArguments("--disabled-notifications");
 
-		//driver = new ChromeDriver();
+		//driver = new ChromeDriver(option);
 		driver = new FirefoxDriver();
 		driver.get(pro.getProperty("Url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Util.IMPLICITLY_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(Util.PAGE_LOAD, TimeUnit.SECONDS);
-		log.info("Browser Lunch Successfully");
 		
 		
 	}
