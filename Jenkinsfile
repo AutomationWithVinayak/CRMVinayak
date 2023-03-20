@@ -32,10 +32,5 @@ pipeline {
     }
 }
 
- post('Report){
- 
-    junit 'user.dir/target/*xml'
-    
- }
   
 }
