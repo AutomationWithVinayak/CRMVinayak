@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Generic extends BaseClass{
 
-	
+
 
 	public Generic() throws IOException {
 		super();
@@ -43,8 +43,8 @@ public class Generic extends BaseClass{
 		return ;
 	}
 
-	
-	
+
+
 
 	/**** 
 	 * *******@Authour :- Vinayak , Purpose make common method for click on element (only for element with text <tagname..>text</tagname ..>  ****************
@@ -66,8 +66,8 @@ public class Generic extends BaseClass{
 
 	public boolean textIsDisplay(String text) {
 
-		 return  driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed();
-		
+		return  driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed();
+
 	}
 
 
@@ -81,11 +81,11 @@ public class Generic extends BaseClass{
 
 
 	public void clickOnElement(WebElement resumeBtn) {
-		
+
 		String path = resumeBtn.toString();
 
 		driver.findElement(By.xpath(path));
-	
+
 	}
 
 
@@ -109,7 +109,7 @@ public class Generic extends BaseClass{
 
 		Select sc = new Select(element);
 		sc.selectByVisibleText(value);
-		
+
 	}
 
 	public void listBoxByIndex(WebElement element , int index) {
@@ -152,7 +152,7 @@ public class Generic extends BaseClass{
 		Actions ac = new Actions(driver);
 		ac.moveToElement(target).build().perform();	  
 		return;
-		
+
 	}
 
 
@@ -174,7 +174,7 @@ public class Generic extends BaseClass{
 			log.info(element +" is not  Display");
 		}
 
-			
+
 	}
 
 
@@ -190,7 +190,7 @@ public class Generic extends BaseClass{
 	}
 
 
-	
+
 	/**
 	 * 
 	 **@Authour :- Vinayak ,This Method Is use to Handal DropDown / ListBox Withot Select By Visible Text first argument is xpath and secind is visible text 
@@ -211,9 +211,9 @@ public class Generic extends BaseClass{
 		}	
 	}
 
-	
-	
-	
+
+
+
 
 	/**
 	 * 
@@ -222,61 +222,70 @@ public class Generic extends BaseClass{
 	 */ 
 
 
-    public void focusOnIframe(WebElement element) {
-    	
-    	driver.switchTo().frame(element);
-    	
-    log.info("focus on iframe : -  "+element);
-    	
-    }
-    
-    /**
+	public void focusOnIframe(WebElement element) {
+
+		driver.switchTo().frame(element);
+
+		log.info("focus on iframe : -  "+element);
+
+	}
+
+	/**
 	 * 
 	 **@Authour :- Vinayak ,This Method Is use to Handal Windows by Id (Id Is in string format)
 	 * 
 	 */   
-    
-   public void windowHandal(String windowId) {
-	   
-	   driver.switchTo().window(windowId);
-	   
-   }
-  
-   
-   /**
+
+	public void windowHandal(String windowId) {
+
+		driver.switchTo().window(windowId);
+
+	}
+
+
+	/**
 	 * 
 	 **@Authour :- Vinayak ,This Method Is use to get  Windows handal id by passing int para (its ined number of id which you want if you are on main first page and click on element and one tab is open then its index number is 1 )
 	 */ 
-   
-   
-   public  String getWindowHandalId(int i) {
-	   
-	   Set<String> ids=driver.getWindowHandles();
-	   ArrayList<String> a = new ArrayList<String>(ids);
-	   String  windowId = a.get(i);
-	   return windowId ;
-	   
-   }
-   
-   
-   
-   
-   /**
-  	 * 
-  	 **@Authour :- Vinayak ,This Method Is use to apply Explicity Wait for 15 sec to perticure element that need  or take time to visible
-  	 */ 
-   
-   
-   public WebElement waitUntilElementVisible( WebElement element) {
-		
+
+
+	public  String getWindowHandalId(int i) {
+
+		Set<String> ids=driver.getWindowHandles();
+		ArrayList<String> a = new ArrayList<String>(ids);
+		String  windowId = a.get(i);
+		return windowId ;
+
+	}
+
+
+
+
+	/**
+	 * 
+	 **@Authour :- Vinayak ,This Method Is use to apply Explicity Wait for 15 sec to perticure element that need  or take time to visible
+	 */ 
+
+
+	public WebElement waitUntilElementVisible( WebElement element) {
+
 		Duration timeout = Duration.ofSeconds(15);
-       WebDriverWait wait = new WebDriverWait(driver, timeout);
-      return wait.until(ExpectedConditions.visibilityOf(element));
-       
-   }
-   
-   
-    
-	
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		return wait.until(ExpectedConditions.visibilityOf(element));
+
+	}
+
+
+	/**
+	 * 
+	 **@Authour :- Vinayak ,This Method Is use to scroll down on element in we used action class method not a javscript executor
+	 */ 
+
+	public void scrollDownOnElementByAction(WebElement element) {
+		Actions ac = new Actions(driver);
+		ac.scrollToElement(element);	 
+	}
+
+
 
 }
