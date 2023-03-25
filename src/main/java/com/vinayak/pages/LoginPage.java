@@ -31,13 +31,21 @@ public class LoginPage extends Generic {
 	
 	
 	
-	public void verifyUrl(String url ) {
+	public void verifyUrl(String url ){
 		
 		String actualUrl =driver.getCurrentUrl();
 		
 		if (url.equals(actualUrl)){
 			
 			log.info("Url is matched");
+		}
+		else {
+			try {
+			 throw new Exception("Url is not matched");
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 	}

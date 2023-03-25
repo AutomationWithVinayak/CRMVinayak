@@ -5,10 +5,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -283,7 +281,8 @@ public class Generic extends BaseClass{
 
 	public void scrollDownOnElementByAction(WebElement element) {
 		Actions ac = new Actions(driver);
-		ac.scrollToElement(element);	 
+		ac.scrollToElement(element);	
+		log.info("Scroll On element :- "+ element);
 	}
 
 

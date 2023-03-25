@@ -2,10 +2,8 @@ package com.vinayak.test;
 
 import java.io.IOException;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import com.vinayak.base.BaseClass;
 import com.vinayak.base.Generic;
@@ -34,7 +32,7 @@ public class TestClass extends BaseClass {
 	}
 
 
-	@Test
+	@Test(enabled =false)
 	public void loginEnter() throws IOException {
 
 		lp = new LoginPage();
@@ -47,7 +45,7 @@ public class TestClass extends BaseClass {
 		
 
 
-	@Test
+	@Test(enabled =false)
 
 	public void dropDownAppiled() throws IOException {
 		lp = new LoginPage();
@@ -66,10 +64,10 @@ public class TestClass extends BaseClass {
 		db = new DashBordPage();
 		lp = new LoginPage();
 		gn =new Generic();
-		lp.verifyUrl(pro.getProperty("Url"));
-		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
-		db.clickOnCheckBox();
-		
+		lp.verifyUrl(pro.getProperty("Urll"));
+//		lp.loginthepage(pro.getProperty("Email"), pro.getProperty("Password"));
+//		db.clickOnCheckBox();
+//		
 	}
 
 

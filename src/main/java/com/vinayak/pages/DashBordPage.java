@@ -72,7 +72,7 @@ public class DashBordPage  extends Generic{
 	public void candidatePipelineByRecruiterAssigned() throws IOException {
 		gn = new Generic();
 		gn.waitInSec(2);
-		gn.scrollOnElement(candidatePipeline);                           log.info("Scroll On element :- "+ candidatePipeline);
+		gn.scrollOnElement(candidatePipeline);                           
 		gn.waitInSec(3);
 		apdBtn.click();                                                  log.info("Click On element :- "+ apdBtn);
 		gn.waitInSec(2);
@@ -85,6 +85,7 @@ public class DashBordPage  extends Generic{
 	public void clickOnCheckBox() throws IOException {
 		gn = new Generic();
 		gn.scrollOnElement(checkBox1);  
+		//gn.scrollDownOnElementByAction(checkBox1);                 
 		//checkBox1.click();
 		
 	}
