@@ -30,9 +30,10 @@ pipeline {
       }
     
     }
-    post('mail'){
+    stage('mail'){
+      steps{
       
-      mail bcc: '', body: '''Hi Team ,
+        mail bcc: '', body: '''Hi Team ,
 
 Please  Job Executed Please Check it.
 
@@ -40,7 +41,10 @@ Thanks and Regards
 Vinayak Bhandurge
 7775933667''', cc: 'vinayakbhandurge1@gmail.com', from: 'vinayakbhandurge0285@gmail.com', replyTo: '', subject: 'Jenkine Job Result', to: 'vinayakbhandurge0285@gmail.com'
       
+        
+      }
     }
+   
 }
 
   
